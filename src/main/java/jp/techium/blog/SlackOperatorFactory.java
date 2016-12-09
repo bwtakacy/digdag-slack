@@ -52,7 +52,7 @@ public class SlackOperatorFactory
             Config params = request.getConfig().mergeDefault(
                     request.getConfig().getNestedOrGetEmpty("slack"));
 
-            String message = workspace.templateCommand(templateEngine, params, null, UTF_8);
+            String message = workspace.templateCommand(templateEngine, params, "workflow_name", UTF_8);
             String url = params.get("webhook", String.class);
             String channel = "#" + params.get("channel", String.class);
             String username = params.get("username", String.class);
