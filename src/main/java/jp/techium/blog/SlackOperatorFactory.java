@@ -7,7 +7,7 @@ import com.mashape.unirest.http.exceptions.UnirestException;
 import io.digdag.client.config.Config;
 import io.digdag.spi.Operator;
 import io.digdag.spi.OperatorFactory;
-import io.digdag.spi.TaskExecutionContext;
+import io.digdag.spi.OperatorContext;
 import io.digdag.spi.TaskRequest;
 import io.digdag.spi.TaskResult;
 import io.digdag.spi.TemplateEngine;
@@ -33,21 +33,21 @@ public class SlackOperatorFactory
     }
 
     @Override
-    public Operator newOperator(Path workspacePath, TaskRequest request)
+    public Operator newOperator(OperatorContext context)
     {
-        return new ExampleOperator(workspacePath, request);
+        return new ExampleOperator(context);
     }
 
     private class ExampleOperator
             extends BaseOperator
     {
-        public ExampleOperator(Path workspacePath, TaskRequest request)
+        public ExampleOperator(OperatorContext context)
         {
-            super(workspacePath, request);
+            super(context);
         }
 
         @Override
-        public TaskResult runTask(TaskExecutionContext ctx)
+        public TaskResult runTask()
         {
             Config params = request.getConfig().mergeDefault(
                     request.getConfig().getNestedOrGetEmpty("slack"));
