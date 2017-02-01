@@ -1,0 +1,14 @@
+language: java
+jdk:
+  - oraclejdk8
+before_script:
+  - git clone https://github.com/treasure-data/digdag.git
+  - git clone https://github.com/bwtakacy/digdag-slack.git
+  - cd digdag
+  - ./gradlew publish
+  - cp digdag-plugin-utils/build/libs/digdag-plugin-utils-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
+  - cp digdag-spi/build/libs/digdag-spi-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
+  - cp digdag-client/build/libs/digdag-client-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
+  - cd ../digdag-slack
+  - ./gradlew check
+
