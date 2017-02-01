@@ -3,6 +3,8 @@
 [![Release](https://jitpack.io/v/bwtakacy/digdag-slack.svg)]
 (https://jitpack.io/bwtakacy/digdag-slack)
 
+[![Build Status](https://travis-ci.org/bwtakacy/digdag-slack.svg?branch=master)](https://travis-ci.org/bwtakacy/digdag-slack)
+
 ## How to use
 
 ### file tree
