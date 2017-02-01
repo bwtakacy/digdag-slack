@@ -1,5 +1,8 @@
 # digdag-slack
 
+[![Release](https://jitpack.io/v/bwtakacy/digdag-slack.svg)]
+(https://jitpack.io/bwtakacy/digdag-slack)
+
 ## How to use
 
 ### file tree
