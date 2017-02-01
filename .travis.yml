@@ -6,6 +6,7 @@ jdk:
 before_install:
   - git clone https://github.com/treasure-data/digdag.git
   - cd digdag
+  - ls
   - ./gradlew publish
 
 install: true
@@ -13,7 +14,9 @@ install: true
 before_script:
   - cd /home/travis/build/bwtakacy/digdag-slack
   - git clone https://github.com/bwtakacy/digdag-slack.git
+  - ls
   - cd digdag
+  - ls
   - cp digdag-plugin-utils/build/libs/digdag-plugin-utils-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
   - cp digdag-spi/build/libs/digdag-spi-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
   - cp digdag-client/build/libs/digdag-client-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
