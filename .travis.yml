@@ -7,6 +7,7 @@ before_install:
   - git clone https://github.com/treasure-data/digdag.git
   - cd digdag
   - ls
+  - ./gradlew build
   - ./gradlew publish
 
 install: true
