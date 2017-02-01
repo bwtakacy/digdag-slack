@@ -21,8 +21,10 @@ _export:
   plugin:
     repositories:
       - file://${repository_path}
+      # - https://jitpack.io
     dependencies:
       - jp.techium.blog:digdag-slack:0.1.2
+      # - com.github.bwtakacy:digdag-slack:0.1.2
 
 +step1:
   slack>: message.txt
@@ -31,6 +33,8 @@ _export:
   username: webhookbot
   icon_emoji: ghost
 ```
+
+This plugin should be taken by local file path or JitPack over HTTPS.
 
 [message.txt]
 ```
