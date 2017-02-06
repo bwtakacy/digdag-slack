@@ -31,5 +31,6 @@ before_script:
   - cp digdag-spi/build/libs/digdag-spi-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
   - cp digdag-client/build/libs/digdag-client-0.9.4-SNAPSHOT.jar ../digdag-slack/libs/
   - cd ../digdag-slack
+  - gradle wrap
 
 script: ./gradlew check
