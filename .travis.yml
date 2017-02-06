@@ -10,6 +10,7 @@ jdk:
   - oraclejdk8
 
 before_install:
+  - nvm install 7.5
   - java -version
   - javac -version
   - git clone https://github.com/treasure-data/digdag.git
