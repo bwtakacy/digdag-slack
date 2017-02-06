@@ -1,12 +1,15 @@
 language: java
 
 sudo: false
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 jdk:
   - oraclejdk8
 
 before_install:
-  - sudo apt-get update && sudo apt-get install oracle-java8-installer
   - java -version
   - javac -version
   - git clone https://github.com/treasure-data/digdag.git
