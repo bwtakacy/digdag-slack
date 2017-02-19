@@ -27,9 +27,9 @@ before_script:
   - ls
   - cd digdag
   - ls
-  - cp digdag-plugin-utils/build/libs/digdag-plugin-utils-0.9.5-SNAPSHOT.jar ../digdag-slack/libs/
-  - cp digdag-spi/build/libs/digdag-spi-0.9.5-SNAPSHOT.jar ../digdag-slack/libs/
-  - cp digdag-client/build/libs/digdag-client-0.9.5-SNAPSHOT.jar ../digdag-slack/libs/
+  - cp digdag-plugin-utils/build/libs/digdag-plugin-utils-0.9.6-SNAPSHOT.jar ../digdag-slack/libs/
+  - cp digdag-spi/build/libs/digdag-spi-0.9.6-SNAPSHOT.jar ../digdag-slack/libs/
+  - cp digdag-client/build/libs/digdag-client-0.9.6-SNAPSHOT.jar ../digdag-slack/libs/
   - cd ../digdag-slack
   - gradle wrap
 
